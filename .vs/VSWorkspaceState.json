@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TD1",
+    "\\TD1\\HttpListener",
+    "\\TD1\\HttpListener\\BasicServerHttpListener"
+  ],
+  "SelectedNode": "\\TD1\\HttpListener\\BasicServerHttpListener\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

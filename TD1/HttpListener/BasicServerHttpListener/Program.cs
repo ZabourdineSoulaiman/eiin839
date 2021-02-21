@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Collections;
 
 namespace BasicServerHTTPlistener
 {
@@ -56,6 +57,7 @@ namespace BasicServerHTTPlistener
                 // Note: The GetContext method blocks while waiting for a request.
                 HttpListenerContext context = listener.GetContext();
                 HttpListenerRequest request = context.Request;
+                Header header = new Header(request);
 
                 string documentContents;
                 using (Stream receiveStream = request.InputStream)
@@ -65,7 +67,15 @@ namespace BasicServerHTTPlistener
                         documentContents = readStream.ReadToEnd();
                     }
                 }
-                Console.WriteLine($"Received request for {request.Url}");
+                header.printAll();
+                header.print(HttpRequestHeader.ContentType); //MIME
+                header.print(HttpRequestHeader.Cookie); //Cookie
+                header.print(HttpRequestHeader.UserAgent); // L’agent utilisateur demandeur
+                header.print(HttpRequestHeader.AcceptEncoding); //  les encodages de contenu admis pour la réponse
+                header.print(HttpRequestHeader.Authorization); // les informations d’identification que le client doit présenter pour s’authentifier auprès du serveur
+                header.print(HttpRequestHeader.ContentLanguage); // langages naturels préférés pour la réponse
+                header.print(HttpRequestHeader.AcceptCharset); //les jeux de caractères admis pour la réponse
+                header.print(HttpRequestHeader.AcceptCharset); // le jeu de méthodes HTTP pris en chargeConsole.WriteLine($"Received request for {request.Url}");
                 Console.WriteLine(documentContents);
 
                 // Obtain a response object.
@@ -83,6 +93,28 @@ namespace BasicServerHTTPlistener
             }
             // Httplistener neither stop ...
             // listener.Stop();
+        }
+    }
+
+    public class Header
+    {
+        private HttpListenerRequest listenerRequest;
+
+        public Header(HttpListenerRequest req)
+        {
+            this.listenerRequest = req;
+        }
+
+        public void printAll()
+        {
+            foreach (string str in Enum.GetNames(typeof(HttpRequestHeader)))
+            {
+                Console.WriteLine(str + ": " + this.listenerRequest.Headers[str]);
+            }
+        }
+        public void print(HttpRequestHeader req)
+        {
+            Console.WriteLine($"{req}: { this.listenerRequest.Headers[req.ToString()]}");
         }
     }
 }
