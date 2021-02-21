@@ -5,3 +5,7 @@ C:\Users\Utopsia\test\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServerUrlPars
 C:\Users\Utopsia\test\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServerUrlParser.csproj.CoreCompileInputs.cache
 C:\Users\Utopsia\test\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.exe
 C:\Users\Utopsia\test\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.pdb
+D:\Cours\SI4\Semestre 2\SOC\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServerUrlParser.csprojAssemblyReference.cache
+D:\Cours\SI4\Semestre 2\SOC\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServerUrlParser.csproj.CoreCompileInputs.cache
+D:\Cours\SI4\Semestre 2\SOC\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.exe
+D:\Cours\SI4\Semestre 2\SOC\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.pdb

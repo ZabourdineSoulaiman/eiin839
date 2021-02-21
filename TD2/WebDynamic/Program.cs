@@ -18,8 +18,8 @@ namespace BasicServerHTTPlistener
                 Console.WriteLine("A more recent Windows version is required to use the HttpListener class.");
                 return;
             }
- 
- 
+
+
             // Create a listener.
             HttpListener listener = new HttpListener();
 
@@ -71,7 +71,7 @@ namespace BasicServerHTTPlistener
                         documentContents = readStream.ReadToEnd();
                     }
                 }
-                
+
                 // get url 
                 Console.WriteLine($"Received request for {request.Url}");
 
@@ -102,10 +102,8 @@ namespace BasicServerHTTPlistener
                 Console.WriteLine("param3 = " + HttpUtility.ParseQueryString(request.Url.Query).Get("param3"));
                 Console.WriteLine("param4 = " + HttpUtility.ParseQueryString(request.Url.Query).Get("param4"));
 
-                // retrieving params
                 String param1 = HttpUtility.ParseQueryString(request.Url.Query).Get("param1");
                 String param2 = HttpUtility.ParseQueryString(request.Url.Query).Get("param2");
-
 
                 //
                 Console.WriteLine(documentContents);
@@ -115,7 +113,6 @@ namespace BasicServerHTTPlistener
 
                 // Construct a response.
                 MyMethods m = new MyMethods();
-
                 string responseString = "<HTML><BODY> Hello world!</BODY></HTML>";
                 if ("MyMethod".Equals(request.Url.Segments[request.Url.Segments.Length - 1]))
                 {

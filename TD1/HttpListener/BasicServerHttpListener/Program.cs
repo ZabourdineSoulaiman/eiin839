@@ -34,6 +34,7 @@ namespace BasicServerHTTPlistener
             {
                 foreach (string s in args)
                 {
+                Console.WriteLine("Test 1");
                     listener.Prefixes.Add(s);
                     // don't forget to authorize access to the TCP/IP addresses localhost:xxxx and localhost:yyyy 
                     // with netsh http add urlacl url=http://localhost:xxxx/ user="Tout le monde"
@@ -50,6 +51,7 @@ namespace BasicServerHTTPlistener
             foreach (string s in args)
             {
                 Console.WriteLine("Listening for connections on " + s);
+                Console.WriteLine("Test 2");
             }
 
             while (true)
