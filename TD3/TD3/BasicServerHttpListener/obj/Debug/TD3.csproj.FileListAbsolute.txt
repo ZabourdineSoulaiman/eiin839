@@ -8,3 +8,12 @@ D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\HttpListener\BasicServerHttpListener\ob
 D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\HttpListener\BasicServerHttpListener\bin\Debug\Newtonsoft.Json.dll
 D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\HttpListener\BasicServerHttpListener\bin\Debug\Newtonsoft.Json.xml
 D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\HttpListener\BasicServerHttpListener\obj\Debug\TD3.csproj.CopyComplete
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\bin\Debug\ConsoleApp3.exe.config
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\bin\Debug\ConsoleApp3.exe
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\bin\Debug\ConsoleApp3.pdb
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\bin\Debug\Newtonsoft.Json.dll
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\bin\Debug\Newtonsoft.Json.xml
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\obj\Debug\TD3.csproj.CoreCompileInputs.cache
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\obj\Debug\TD3.csproj.CopyComplete
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\obj\Debug\ConsoleApp3.exe
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD3\TD3\BasicServerHttpListener\obj\Debug\ConsoleApp3.pdb

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TD3
 {
@@ -19,7 +16,7 @@ namespace TD3
         public int available_bike_stands { get; set; }
         public int available_bikes { get; set; }
         public string status { get; set; }
-        public long last_update { get; set; }
+        public long? last_update { get; set; }
         public Boolean connected { get; set; }
         public Boolean overflow { get; set; }
         public Stands totalStands { get; set; }

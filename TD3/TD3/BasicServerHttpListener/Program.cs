@@ -1,11 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
+using System.Device.Location;
 
 namespace TD3
 {
@@ -17,14 +15,24 @@ namespace TD3
         private static async Task Main(string[] args)
         {
             List<Contract> contracts = await getContracts();
-            Contract contract = contracts[0];
-            List<Station> stations = await getStations(contract);
+            Position position = new Position(0.0, 0.0);
+            foreach(var item in contracts)
+            {
+                Station closestStation = null;
+                closestStation = await getClosestStationAsync(item, position);
+                if(closestStation == null)
+                {
+                    Console.WriteLine(item.name + "'s closest doesn't have any stations.\n");
 
-            Station stationInfo = await getStationInfo(stations[0]);
+                }
+                else
+                {
+                    Console.WriteLine(item.name + "'s closest station is : " + closestStation.name + ".\n");
 
-            Console.WriteLine(stationInfo.ToString());
+                }
+            }
 
-            Console.WriteLine("Press enter to close...");
+            Console.WriteLine("Enter key to close");
             Console.ReadLine();
         }
 
@@ -49,7 +57,7 @@ namespace TD3
             List<Station> stations = new List<Station>();
             try
             {
-                string response = await client.GetStringAsync("https://api.jcdecaux.com/vls/v1/stations?contract="+ contract.name +"&apiKey=" + Program.apiKey);
+                string response = await client.GetStringAsync("https://api.jcdecaux.com/vls/v1/stations?contract=" + contract.name + "&apiKey=" + Program.apiKey);
                 stations = JsonConvert.DeserializeObject<List<Station>>(response);
             }
             catch (HttpRequestException e)
@@ -65,7 +73,7 @@ namespace TD3
             Station stationinfo = new Station();
             try
             {
-                string response = await client.GetStringAsync("https://api.jcdecaux.com/vls/v1/stations/" + station.number +"?contract=" + station.contract_name + "&apiKey=" + Program.apiKey);
+                string response = await client.GetStringAsync("https://api.jcdecaux.com/vls/v1/stations/" + station.number + "?contract=" + station.contract_name + "&apiKey=" + Program.apiKey);
                 stationinfo = JsonConvert.DeserializeObject<Station>(response);
             }
             catch (HttpRequestException e)
@@ -76,78 +84,34 @@ namespace TD3
             return stationinfo;
         }
 
-    }
-
-    /*class Contract
-    {
-        public string name { get; set; }
-        public string commercial_name { get; set; }
-        public string country_code { get; set; }
-        public List<string> cities { get; set; }
-
-    }
-
-    class Station
-    {
-        public int number { get; set; }
-        public string contract_name { get; set; }
-        public string name { get; set; }
-        public string address { get; set; }
-        public Position position { get; set; }
-        public Boolean banking { get; set; }
-        public Boolean bonus { get; set; }
-        public int bike_stands { get; set; }
-        public int available_bike_stands { get; set; }
-        public int available_bikes { get; set; }
-        public string status { get; set; }
-        public long last_update { get; set; }
-        public Boolean connected { get; set; }
-        public Boolean overflow { get; set; }
-        public Stands totalStands { get; set; }
-        public Stands mainStands { get; set; }
-        public Stands overflowStands { get; set; }
-
-        public override string ToString()
+        public static async Task<Station> getClosestStationAsync(Contract contract, Position position)
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (System.Reflection.PropertyInfo property in this.GetType().GetProperties())
+            Station closestStation = null;
+            double distance = Double.MaxValue;
+
+            GeoCoordinate coordinate = new GeoCoordinate(position.lat, position.lng);
+            List<Station> stations = await getStations(contract);
+
+            foreach(var item in stations)
             {
-                sb.Append(property.Name);
-                sb.Append(": ");
-                if (property.GetIndexParameters().Length > 0)
-                {
-                    sb.Append("Indexed Property cannot be used");
+                if(closestStation == null){
+                    closestStation = item;
+                    distance = coordinate.GetDistanceTo(new GeoCoordinate(item.position.lat, item.position.lng));
                 }
                 else
                 {
-                    sb.Append(property.GetValue(this, null));
+                    if (coordinate.GetDistanceTo(new GeoCoordinate(item.position.lat, item.position.lng)) < distance)
+                    {
+                        closestStation = item;
+                        distance = coordinate.GetDistanceTo(new GeoCoordinate(item.position.lat, item.position.lng));
+                    }
                 }
-
-                sb.Append(System.Environment.NewLine);
             }
 
-            return sb.ToString();
+            return closestStation;
         }
-    }
 
-    class Stands
-    {
-        public Availabilities availabilities { get; set; }
-        public int capacity { get; set; }
 
     }
-
-    class Availabilities
-    {
-        public int bikes { get; set; }
-        public int stands { get; set; }
-
-    }
-
-    class Position
-    {
-        public double lat { get; set; }
-        public double lng { get; set; }
-    }*/
 
 }
