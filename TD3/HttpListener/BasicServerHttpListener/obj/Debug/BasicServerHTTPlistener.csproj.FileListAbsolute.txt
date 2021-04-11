@@ -1,0 +1,7 @@
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.exe.config
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.exe
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.pdb
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\BasicServerHTTPlistener.csprojAssemblyReference.cache
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\BasicServerHTTPlistener.csproj.CoreCompileInputs.cache
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\ConsoleApp3.exe
+D:\Cours\SI4\Semestre_2\SOC2\eiin839\TD1\HttpListener\BasicServerHttpListener\obj\Debug\ConsoleApp3.pdb
