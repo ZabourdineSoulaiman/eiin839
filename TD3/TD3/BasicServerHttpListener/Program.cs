@@ -15,7 +15,7 @@ namespace TD3
         private static async Task Main(string[] args)
         {
             List<Contract> contracts = await getContracts();
-            Position position = new Position(0.0, 0.0);
+            Position position = new Position(43.4548260614091, -3.96690066866145);
             foreach(var item in contracts)
             {
                 Station closestStation = null;

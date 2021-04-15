@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <link rel="stylesheet" href="main.css">
+	    <title>My first Web Services UI client</title>
+	</head>
+	<body>
+	
+	<script type="text/javascript" src="main.js"></script>
+	<label for="input">Input contract here : </label>
+	<input id="input">
+	<button onclick="retrieveAllContracts()">Retrieve Contracts</button>
+	<br>
+	<br>
+	
+	<label for="conctractList">Input station here : </label>
+	<input list="dataConctractList" id="conctractList">
+	<datalist id="dataConctractList"></datalist>
+	<button onclick="retrieveContractStations()">Retrieve Contract Stations</button>
+	<br>
+	<br>
+	
+
+	<label>Position latitude : </label>
+	<input id="positionLatitude">
+	<br>
+	<label>Position longitude : </label>
+	<input id="positionLongitude">
+	<br>
+	<button onclick="getClosestStation()">Find closest Station</button>
+	
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
