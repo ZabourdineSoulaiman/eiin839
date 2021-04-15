@@ -1,0 +1,7 @@
+C:\Users\soula\source\repos\RestAndSoapTP\RestAndSoapTP\bin\Debug\RestAndSoapTP.dll.config
+C:\Users\soula\source\repos\RestAndSoapTP\RestAndSoapTP\bin\Debug\RestAndSoapTP.dll
+C:\Users\soula\source\repos\RestAndSoapTP\RestAndSoapTP\bin\Debug\RestAndSoapTP.pdb
+C:\Users\soula\source\repos\RestAndSoapTP\RestAndSoapTP\obj\Debug\RestAndSoapTP.csprojAssemblyReference.cache
+C:\Users\soula\source\repos\RestAndSoapTP\RestAndSoapTP\obj\Debug\RestAndSoapTP.csproj.CoreCompileInputs.cache
+C:\Users\soula\source\repos\RestAndSoapTP\RestAndSoapTP\obj\Debug\RestAndSoapTP.dll
+C:\Users\soula\source\repos\RestAndSoapTP\RestAndSoapTP\obj\Debug\RestAndSoapTP.pdb

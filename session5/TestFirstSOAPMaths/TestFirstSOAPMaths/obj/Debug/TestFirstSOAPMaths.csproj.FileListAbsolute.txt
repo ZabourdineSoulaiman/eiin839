@@ -1,0 +1,7 @@
+C:\Users\soula\source\repos\TestFirstSOAPMaths\TestFirstSOAPMaths\bin\Debug\TestFirstSOAPMaths.exe.config
+C:\Users\soula\source\repos\TestFirstSOAPMaths\TestFirstSOAPMaths\bin\Debug\TestFirstSOAPMaths.exe
+C:\Users\soula\source\repos\TestFirstSOAPMaths\TestFirstSOAPMaths\bin\Debug\TestFirstSOAPMaths.pdb
+C:\Users\soula\source\repos\TestFirstSOAPMaths\TestFirstSOAPMaths\obj\Debug\TestFirstSOAPMaths.csprojAssemblyReference.cache
+C:\Users\soula\source\repos\TestFirstSOAPMaths\TestFirstSOAPMaths\obj\Debug\TestFirstSOAPMaths.csproj.CoreCompileInputs.cache
+C:\Users\soula\source\repos\TestFirstSOAPMaths\TestFirstSOAPMaths\obj\Debug\TestFirstSOAPMaths.exe
+C:\Users\soula\source\repos\TestFirstSOAPMaths\TestFirstSOAPMaths\obj\Debug\TestFirstSOAPMaths.pdb
